@@ -1,3 +1,28 @@
 body {
- background-color: #D8D8D8;
+  background-color: #D8D8D8;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: justify;
+}
+table.table-bordered{
+  border:2px solid black;
+  margin-top:20px;
+  }
+table.table-bordered > thead > tr > th{
+  text-align: center;
+  border:2px solid black;
+}
+table.table-bordered > tbody > tr > td{
+    border:2px solid black;
+}
+
+textarea.form-control{
+  text-align: center;
+  font-size: 25px;
+  
 }
