@@ -18,11 +18,16 @@ table.table-bordered > thead > tr > th{
   border:2px solid black;
 }
 table.table-bordered > tbody > tr > td{
-    border:2px solid black;
+  text-align: center;
+  border:2px solid black;
 }
 
-textarea.form-control{
+input.form-control{
   text-align: center;
-  font-size: 25px;
-  
+  font-size: 20px;
+}
+
+.dif{
+  color: red;
+  font-size: 40px;
 }
