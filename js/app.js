@@ -74,11 +74,24 @@
 
           $('tbody').append('<tr>' + '<td>' + numer + '</td>' + '<td>' + y + '</td>' + '<td>' + x + '</td>' + '</tr>');
 
-          if(x === 4){
-            console.log("ganaste");
-            
-          };
 
+                    if(x === 4){
+                      console.log("ganaste");
+
+                      document.getElementById("myOverlay").style.display = "block";
+
+
+                                 // Close the full screen search box
+                                 $('.closebtn').on('click', function(){
+
+                                   document.getElementById("myOverlay").style.display = "none";
+
+                                 });
+
+
+
+
+                    };
 
 
 
