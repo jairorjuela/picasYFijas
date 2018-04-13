@@ -19,8 +19,10 @@ function shuffle(array) {
 //validaciones
       if(input.length <=3 || input.length >4){
         $('#num').addClass('dif');
+        $('input').addClass('error')
       }else{
         $('#num').removeClass('dif');
+        $('input').removeClass('error')
 
         var numberplayer = Array.from(input);
 
@@ -33,16 +35,17 @@ function shuffle(array) {
             case (numberplayer[1] === numberplayer[3]):
             case (numberplayer[2] === numberplayer[3]):
               $('#dif').addClass('dif');
+              $('input').addClass('error')
               break;
             default:
             $('#dif').removeClass('dif');
+            $('input').removeClass('error')
             var jairo = numberplayer
-            console.log("jairo default  " + jairo);
             break;
           }
         }
 
-//conteo de picas y fijas
+//Conteo de picas y fijas
         var x = 0;
         var y = 0;
 
@@ -73,7 +76,7 @@ function shuffle(array) {
           $('tbody').append('<tr>' + '<td>' + numer + '</td>' + '<td>' + y + '</td>' + '<td>' + x + '</td>' + '</tr>');
 
           $('#number').val('');
-
+//Generar nuevo juego
             if(x === 4){
               document.getElementById("myOverlay").style.display = "block";
 
@@ -83,8 +86,7 @@ function shuffle(array) {
 
                 $('tbody').empty();
 
-                location.reload();
-
+                location.reload(true);
               });
             };
           }
