@@ -1,5 +1,5 @@
 //generacion de numero para jugar
-  function shuffle(array) {
+function shuffle(array) {
     for(var j, x, i = array.length; i; j = parseInt(Math.random() * i), x =   array[--i], array[i] = array[j], array[j] = x);
     return array;
   };
@@ -26,7 +26,6 @@
 
         for(var i = 0; i < numberplayer.length; i++){
           switch (true){
-
             case (numberplayer[0] === numberplayer[1]):
             case (numberplayer[0] === numberplayer[2]):
             case (numberplayer[0] === numberplayer[3]):
@@ -51,7 +50,6 @@
 
           var newJairo = jairo.map(Number);
 
-
           if(newJairo[0] === random[0]){
             x += 1;
           }if((newJairo[0] === random[1]) || (newJairo[0] === random[2]) || (newJairo[0] === random[3])){
@@ -74,60 +72,23 @@
 
           $('tbody').append('<tr>' + '<td>' + numer + '</td>' + '<td>' + y + '</td>' + '<td>' + x + '</td>' + '</tr>');
 
+          $('#number').val('');
 
-                    if(x === 4){
-                      console.log("ganaste");
+            if(x === 4){
+              document.getElementById("myOverlay").style.display = "block";
 
-                      document.getElementById("myOverlay").style.display = "block";
+              $('.closebtn').on('click', function(){
 
+                document.getElementById("myOverlay").style.display = "none";
 
-                                 // Close the full screen search box
-                                 $('.closebtn').on('click', function(){
+                $('tbody').empty();
 
-                                   document.getElementById("myOverlay").style.display = "none";
+                location.reload();
 
-                                 });
-
-
-
-
-                    };
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              });
+            };
+          }
       }
-
-
-
-      e.preventDefault();
-    }
-
-
-  });
+    e.preventDefault();
+  }
+});
